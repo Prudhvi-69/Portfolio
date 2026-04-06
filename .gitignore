@@ -1,0 +1,21 @@
+# Build artifacts and cache
+gb/spray-*
+
+# Node modules
+node_modules/
+
+# MacOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Temp / backup files - do not deploy
+index_restored.html
+index_tmp.html
+index1.html
+index2.html
+index3.html
+index4.html
+TODO.md
