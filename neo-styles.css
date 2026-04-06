@@ -1,4 +1,4 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -1683,53 +1683,6 @@ body[data-theme="dark"] .stat-number {
     box-shadow: 4px 4px 0 var(--border);
   }
 
-  .journey-section {
-    margin-bottom: 2rem;
-  }
-
-  .journey-container {
-    grid-template-columns: 1fr !important;
-    min-height: auto !important;
-  }
-
-  .journey-timeline {
-    padding: 1rem;
-    box-shadow: 3px 3px 0 var(--border);
-    height: auto;
-    min-height: 300px;
-    max-height: 420px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    transform: none !important;
-  }
-
-  .journey-timeline-back {
-    display: none !important;
-  }
-
-  .timeline-header {
-    margin: -1rem -1rem 1rem -1rem;
-    padding: 0.75rem 1rem;
-    top: -1px;
-  }
-
-  .journey-map-container {
-    min-height: 320px;
-    box-shadow: 3px 3px 0 var(--border);
-    z-index: 1;
-    height: 320px !important;
-  }
-
-  #journey-map {
-    height: 320px !important;
-  }
-
-  .map-pirate-overlay {
-    width: 80px;
-    bottom: 5px;
-    left: 5px;
-  }
-
   .card {
     padding: 1.25rem;
     box-shadow: 4px 4px 0 var(--border);
@@ -1936,54 +1889,10 @@ body[data-theme="dark"] .stat-number {
 
 .journey-container {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 100%;
-  margin: 0;
-  position: relative;
-}
-
-@media (min-width: 769px) {
-  .journey-container {
-    display: grid;
-    grid-template-columns: 400px 1fr;
-    gap: 0;
-    align-items: stretch;
-    perspective: 2000px;
-    position: relative;
-    min-height: 600px;
-  }
-
-  .journey-timeline {
-    grid-column: 1;
-    grid-row: 1;
-    transform-origin: right center;
-    transition: transform 0.1s ease-out;
-    transform: rotateY(180deg);
-    height: auto;
-    min-height: 600px;
-  }
-
-  .journey-timeline-back {
-    display: flex !important;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 400px;
-    height: 100%;
-    min-height: 600px;
-    z-index: 100;
-    pointer-events: none;
-    transform-origin: right center;
-    transition: transform 0.1s ease-out;
-  }
-
-  .journey-map-container {
-    height: auto;
-    min-height: 600px;
-    grid-column: 2;
-    z-index: 1;
-  }
+  grid-template-columns: 380px 1fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 500px;
 }
 
 .journey-timeline {
@@ -1991,25 +1900,12 @@ body[data-theme="dark"] .stat-number {
   padding: 1.5rem;
   border: var(--border-width) solid var(--border);
   box-shadow: 8px 8px 0 var(--border);
-  min-height: 600px;
-  height: auto;
-  position: relative;
   overflow-y: auto;
+  max-height: 600px;
 }
 
 .journey-timeline-back {
   display: none;
-  background: var(--white);
-  border: var(--border-width) solid var(--border);
-  box-shadow: 8px 8px 0 var(--border);
-  height: 600px;
-  align-items: center;
-  justify-content: center;
-}
-
-.treasure-map-svg {
-  width: 100%;
-  height: 100%;
 }
 
 .timeline-header {
@@ -2019,7 +1915,7 @@ body[data-theme="dark"] .stat-number {
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   border-bottom: var(--border-width) solid var(--border);
   position: sticky;
-  top: -25px;
+  top: 0;
   background: var(--white);
   z-index: 10;
 }
@@ -2083,14 +1979,6 @@ body[data-theme="dark"] .stat-number {
   line-height: 1.4;
 }
 
-.timeline-date {
-  font-size: 0.85rem;
-  color: var(--text);
-  opacity: 0.7;
-  margin-bottom: 0.5rem;
-  font-family: 'Space Mono', monospace;
-}
-
 .timeline-description {
   font-size: 0.9rem;
   line-height: 1.6;
@@ -2113,17 +2001,26 @@ body[data-theme="dark"] .stat-number {
 
 .journey-map-container {
   border: var(--border-width) solid var(--border);
+  border-left: none;
   box-shadow: 8px 8px 0 var(--border);
-  min-height: 600px;
-  height: auto;
+  min-height: 500px;
   position: relative;
   overflow: hidden;
 }
 
 #journey-map {
   width: 100%;
-  height: 600px;
+  height: 100%;
+  min-height: 500px;
   border: none;
+}
+
+@media (max-width: 768px) {
+  .journey-section { margin-bottom: 2rem; }
+  .journey-container { grid-template-columns: 1fr; }
+  .journey-timeline { max-height: 380px; padding: 1rem; box-shadow: 3px 3px 0 var(--border); }
+  .journey-map-container { min-height: 300px; border-left: var(--border-width) solid var(--border); box-shadow: 3px 3px 0 var(--border); }
+  #journey-map { min-height: 300px; }
 }
 
 .map-overlay-lines {
