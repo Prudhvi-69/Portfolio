@@ -3522,7 +3522,7 @@ body[data-theme="dark"] .nav-lazyfire {
   flex-direction: column;
   border-right: var(--border-width) solid var(--border);
   background: var(--white);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .colleges-search-bar {
