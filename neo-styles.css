@@ -3522,7 +3522,8 @@ body[data-theme="dark"] .nav-lazyfire {
   flex-direction: column;
   border-right: var(--border-width) solid var(--border);
   background: var(--white);
-  overflow: visible;
+  overflow: hidden;
+  height: 600px;
 }
 
 .colleges-search-bar {
@@ -3555,11 +3556,11 @@ body[data-theme="dark"] .nav-lazyfire {
 .colleges-grid {
   overflow-y: auto;
   flex: 1;
-  max-height: 560px;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  min-height: 0;
 }
 
 .college-card {
